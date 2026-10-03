@@ -144,3 +144,21 @@ Rotate the token if it was ever pasted into a chat.
 - Built games are tracked so they can be downloaded from GitHub. Rebuild them in the same commit as the
   source change that affects them.
 - Keep this file current. It is the project's memory.
+
+## Windmill and the room (3 Oct 2026)
+
+Croix's tools now coordinate through **Windmill** (`croix18/Windmill`): the spine (the year's plan as one
+JSON — every school day, both courses, lesson, benchmarks, IXL due dates, the bell and week colour from
+Deckhand's own schedule), the **room** (one small object the tools exchange: `plan` · `tally` · `panel` ·
+`roster` · `log`, one owner per part, newest copy per part, data tiers so counts ride every road, first
+names ride Drive or encrypted, and grades never leave Tally), the reader every tool embeds, two room-code
+forms, and a conformance test each repo runs. The design — alternatives, the contract, three transports
+(room code · Drive file · Apps Script), per-tool changes, the spiral rule, the build order — is the
+*Room Coordination Plan*, a Claude doc of Croix's: https://claude.ai/code/artifact/9db84d04-9444-48c4-adad-9c68905eefd8 (open it with the docs tool). Croix's standing
+instruction: "Keep it over engineered. I want everything." Read Windmill's `README.md` and `HANDOFF.md`
+before building this tool's part.
+
+**Geopardy's part.** The setup screen will offer a ladder from the room: categories = the unit's five
+weakest benchmarks, tiers by `atGoal` ascending, items from Cadence's export; after the podium it writes
+`panel.geopardy[]` (share of teams right per tile) for the heat map. `engine/schedule.json` is a copy of
+Deckhand's bell block; Windmill's spine carries the same block and can replace the copy at build.
