@@ -1,0 +1,124 @@
+{
+ "title": "Placeholder Unit (sample questions)",
+ "course": "Grade 7 Math",
+ "tiers": [
+  100,
+  200,
+  300,
+  400
+ ],
+ "tierNotes": [
+  "Recall",
+  "One step",
+  "Multi-step",
+  "Apply / reason"
+ ],
+ "categories": [
+  {
+   "name": "Integers",
+   "questions": [
+    {
+     "q": "What is the absolute value of $-12$?",
+     "a": "$12$",
+     "work": "Absolute value is distance from zero, so it is never negative."
+    },
+    {
+     "q": "Find the sum: $-8 + 15$",
+     "a": "$7$",
+     "work": "Start at $-8$ and move 15 to the right: $15 - 8 = 7$."
+    },
+    {
+     "q": "Evaluate: $-3(4) - (-10) \\div 2$",
+     "a": "$-7$",
+     "work": "$-3(4) = -12$ and $(-10) \\div 2 = -5$. Then $-12 - (-5) = -12 + 5 = -7$."
+    },
+    {
+     "q": "A diver is at $-45$ feet. She rises 18 feet, then descends 30 feet. What is her position now?",
+     "a": "$-57$ feet",
+     "work": "$-45 + 18 - 30 = -27 - 30 = -57$."
+    }
+   ]
+  },
+  {
+   "name": "Rational Numbers",
+   "questions": [
+    {
+     "q": "Write $\\dfrac{3}{4}$ as a decimal.",
+     "a": "$0.75$",
+     "work": "$3 \\div 4 = 0.75$."
+    },
+    {
+     "q": "Find the sum: $\\dfrac{2}{3} + \\dfrac{1}{6}$",
+     "a": "$\\dfrac{5}{6}$",
+     "work": "$\\dfrac{2}{3} = \\dfrac{4}{6}$, and $\\dfrac{4}{6} + \\dfrac{1}{6} = \\dfrac{5}{6}$."
+    },
+    {
+     "q": "Find the product in simplest form: $1\\dfrac{1}{2} \\times \\dfrac{4}{9}$",
+     "a": "$\\dfrac{2}{3}$",
+     "work": "$\\dfrac{3}{2} \\times \\dfrac{4}{9} = \\dfrac{12}{18} = \\dfrac{2}{3}$."
+    },
+    {
+     "q": "One batch of cookies needs $2\\dfrac{1}{4}$ cups of flour. How many FULL batches can you make with 12 cups?",
+     "a": "5 full batches",
+     "work": "$12 \\div 2.25 = 5.\\overline{3}$, so 5 full batches (5 batches use $11\\frac{1}{4}$ cups)."
+    }
+   ]
+  },
+  {
+   "name": "Expressions & Equations",
+   "questions": [
+    {
+     "q": "In the expression $7x + 4$, what is the coefficient?",
+     "a": "$7$",
+     "work": "The coefficient is the number multiplied by the variable."
+    },
+    {
+     "q": "Simplify: $5x + 3 - 2x + 9$",
+     "a": "$3x + 12$",
+     "work": "Combine like terms: $5x - 2x = 3x$ and $3 + 9 = 12$."
+    },
+    {
+     "q": "Solve: $3x - 7 = 20$",
+     "a": "$x = 9$",
+     "work": "Add 7 to both sides: $3x = 27$. Divide by 3: $x = 9$."
+    },
+    {
+     "q": "A student solved $2(x + 5) = 18$ like this:\nStep 1: $2x + 5 = 18$\nStep 2: $2x = 13$\nStep 3: $x = 6.5$\nWhich step has the FIRST mistake, and what is the correct value of $x$?",
+     "a": "Step 1, and $x = 4$",
+     "work": "The 2 must multiply both terms: $2x + 10 = 18$, so $2x = 8$ and $x = 4$."
+    }
+   ]
+  },
+  {
+   "name": "Ratios & Percent",
+   "questions": [
+    {
+     "q": "Write $35\\%$ as a decimal.",
+     "a": "$0.35$",
+     "work": "Percent means per hundred: $35 \\div 100 = 0.35$."
+    },
+    {
+     "q": "What is $20\\%$ of 85?",
+     "a": "$17$",
+     "work": "$0.20 \\times 85 = 17$."
+    },
+    {
+     "q": "4 notebooks cost \\$6.60. At that rate, how much do 10 notebooks cost?",
+     "a": "\\$16.50",
+     "work": "Unit rate: \\$6.60 $\\div 4 =$ \\$1.65 each. Then $10 \\times 1.65 = 16.50$."
+    },
+    {
+     "q": "A \\$48 jacket is $25\\%$ off. Then $7\\%$ sales tax is added to the sale price. What is the final price?",
+     "a": "\\$38.52",
+     "work": "Sale price: $48 \\times 0.75 = 36$. With tax: $36 \\times 1.07 = 38.52$."
+    }
+   ]
+  }
+ ],
+ "final": {
+  "category": "Put It All Together",
+  "q": "A number is doubled, then decreased by 9. The result is $-25$. What is the number?",
+  "a": "$-8$",
+  "work": "$2x - 9 = -25$. Add 9: $2x = -16$. Divide by 2: $x = -8$."
+ }
+}

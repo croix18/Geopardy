@@ -1,0 +1,181 @@
+{
+ "source": "Deckhand 6.24.0 \u00b7 WHMS 2026-27",
+ "anchorMonday": "2026-08-31",
+ "anchorWeekName": "Black Week",
+ "groups": [
+  {
+   "name": "Teal Week",
+   "regular": [
+    {
+     "label": "1st",
+     "start": "9:20",
+     "end": "10:13"
+    },
+    {
+     "label": "2nd",
+     "start": "10:16",
+     "end": "11:09"
+    },
+    {
+     "label": "HOWL Time",
+     "start": "11:12",
+     "end": "11:43"
+    },
+    {
+     "label": "3rd",
+     "start": "11:46",
+     "end": "12:39"
+    },
+    {
+     "label": "Lunch",
+     "start": "12:42",
+     "end": "1:12"
+    },
+    {
+     "label": "4th",
+     "start": "1:15",
+     "end": "2:08"
+    },
+    {
+     "label": "5th",
+     "start": "2:11",
+     "end": "3:04"
+    },
+    {
+     "label": "6th",
+     "start": "3:07",
+     "end": "4:00"
+    }
+   ],
+   "wednesday": [
+    {
+     "label": "1st",
+     "start": "9:20",
+     "end": "10:03"
+    },
+    {
+     "label": "2nd",
+     "start": "10:06",
+     "end": "10:49"
+    },
+    {
+     "label": "HOWL Time",
+     "start": "10:52",
+     "end": "11:23"
+    },
+    {
+     "label": "3rd",
+     "start": "11:26",
+     "end": "12:09"
+    },
+    {
+     "label": "Lunch",
+     "start": "12:12",
+     "end": "12:42"
+    },
+    {
+     "label": "4th",
+     "start": "12:45",
+     "end": "1:28"
+    },
+    {
+     "label": "5th",
+     "start": "1:31",
+     "end": "2:14"
+    },
+    {
+     "label": "6th",
+     "start": "2:17",
+     "end": "3:00"
+    }
+   ]
+  },
+  {
+   "name": "Black Week",
+   "regular": [
+    {
+     "label": "6th",
+     "start": "9:20",
+     "end": "10:13"
+    },
+    {
+     "label": "5th",
+     "start": "10:16",
+     "end": "11:09"
+    },
+    {
+     "label": "HOWL Time",
+     "start": "11:12",
+     "end": "11:43"
+    },
+    {
+     "label": "3rd",
+     "start": "11:46",
+     "end": "12:39"
+    },
+    {
+     "label": "Lunch",
+     "start": "12:42",
+     "end": "1:12"
+    },
+    {
+     "label": "4th",
+     "start": "1:15",
+     "end": "2:08"
+    },
+    {
+     "label": "2nd",
+     "start": "2:11",
+     "end": "3:04"
+    },
+    {
+     "label": "1st",
+     "start": "3:07",
+     "end": "4:00"
+    }
+   ],
+   "wednesday": [
+    {
+     "label": "6th",
+     "start": "9:20",
+     "end": "10:03"
+    },
+    {
+     "label": "5th",
+     "start": "10:06",
+     "end": "10:49"
+    },
+    {
+     "label": "HOWL Time",
+     "start": "10:52",
+     "end": "11:23"
+    },
+    {
+     "label": "3rd",
+     "start": "11:26",
+     "end": "12:09"
+    },
+    {
+     "label": "Lunch",
+     "start": "12:12",
+     "end": "12:42"
+    },
+    {
+     "label": "4th",
+     "start": "12:45",
+     "end": "1:28"
+    },
+    {
+     "label": "2nd",
+     "start": "1:31",
+     "end": "2:14"
+    },
+    {
+     "label": "1st",
+     "start": "2:17",
+     "end": "3:00"
+    }
+   ]
+  }
+ ]
+}

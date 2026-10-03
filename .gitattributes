@@ -1,0 +1,7 @@
+# The build includes engine files verbatim, so line endings must not change on checkout.
+* text=auto eol=lf
+
+# Vendored or generated: keep them out of diffs.
+engine/vendor/** -diff
+games/*.html -diff linguist-generated
+engine/audio/*.mp3 binary
