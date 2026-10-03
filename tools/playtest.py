@@ -1,6 +1,6 @@
 """Play one full game of a built file in headless Chromium.
 
-    python3 tools/playtest.py games/Boards_Up_Area_of_Polygons.html [screenshot_dir]
+    python3 tools/playtest.py games/Geopardy_Area_of_Polygons.html [screenshot_dir]
 
 Opens every tile in ladder order and the Final, screenshots each question in its timer phase and its answer
 phase (default: out/<game>/), reloads mid-game to check the saved game resumes, and fails on any console

@@ -1,6 +1,6 @@
 """Render the printed recording sheet and answer key of a built file to PDF.
 
-    python3 tools/printtest.py games/Boards_Up_Area_of_Polygons.html [output_prefix]
+    python3 tools/printtest.py games/Geopardy_Area_of_Polygons.html [output_prefix]
 
 Writes <prefix>_printkey.pdf and <prefix>_printsheet.pdf (default: out/<game>/print_...). Look at them:
 this script only fails on page errors, it cannot judge the pages."""

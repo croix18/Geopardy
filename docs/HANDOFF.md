@@ -6,9 +6,12 @@ way they are, and what has and has not been checked.
 
 ## What it is
 
-Boards Up! is a classroom review game for a middle school math room. It looks like a quiz-show board
-and runs like a trivia night. The repository is named Geopardy; the game calls itself Boards Up!, and
-the title is editable on the setup screen.
+Geopardy! is a classroom review game for a middle school math room. It looks like a quiz-show board
+and runs like a trivia night. It is a review-day game, not a daily tool: it belongs in Deckhand's kit
+as a card to open on those days, the way Cadence is. The game was called Boards Up! until 3 Oct 2026
+(Croix: "I want to rename as Geopardy!"); "boards up" remains the name of the phase where every team
+shows its whiteboard. The title is editable on the setup screen, and a device that saved the old
+default title is moved to the new one at load.
 
 ## Where it runs (hard constraints)
 
@@ -67,7 +70,7 @@ the title is editable on the setup screen.
 
 ## History
 
-- **Start**: `Boards_Up_Review_Game.html`, a working single-file build with a 4 x 4 placeholder unit.
+- **Start**: `Boards_Up_Review_Game.html` (the game's name then), a working single-file build with a 4 x 4 placeholder unit.
 - **2 Oct 2026**: first two real units, and the engine changes they needed:
   - board rows shrink and tile numbers scale so a 5-row board fits above the score strip;
   - the question block scales to fit, and display-math spacing tightens on the answer screen;
@@ -80,6 +83,14 @@ the title is editable on the setup screen.
   - on a portrait screen the category font shrinks to fit the longest word.
 - **3 Oct 2026**: the single file was split into `engine/` parts and this repository was set up. The
   split is lossless: building from the parts reproduces the delivered game byte for byte.
+- **3 Oct 2026, later**: renamed Geopardy! — default title, `<title>`, built file names
+  (`games/Geopardy_*.html`), docs. Storage keys were already name-free (`reviewgame.*`), so saved
+  games and preferences carry over; only a saved default title is rewritten.
+- **Planned (agreed with Croix, 3 Oct)**: Cadence gets an "Export a Geopardy board" mode — five
+  benchmarks, a ladder drawn from its generators (standard rigor low, high rigor at the top), verified
+  by its own pipeline, written as a unit file this engine consumes (`CTEX.toTeX` for the math). The
+  Windy Hill lesson banks can emit the same file. Geopardy stays a static single file; the generating
+  and checking happen in Cadence. A Deckhand card for Geopardy mirrors the Cadence card.
 
 ## What is verified, and what is not
 

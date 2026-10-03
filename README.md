@@ -1,6 +1,6 @@
 # Geopardy
 
-**Boards Up!** is a classroom review game on a quiz-show board, run like a trivia night: every team
+**Geopardy!** is a classroom review game on a quiz-show board, run like a trivia night: every team
 answers every question on a whiteboard, and scores only go up. This repository holds the game engine,
 the units (question sets) written for it, and the built games.
 
@@ -11,8 +11,8 @@ file that makes no network requests, so it runs from a Google Drive folder or a 
 
 | Game | Class | Content |
 |---|---|---|
-| `Boards_Up_Exponent_Laws.html` | Grade 7 Accelerated | Product, quotient and power rules, zero and negative exponents, missing exponents |
-| `Boards_Up_Area_of_Polygons.html` | Grade 7 | Area of rectangles, triangles, parallelograms, trapezoids, rhombi and composite figures, with a drawn figure on every question |
+| `Geopardy_Exponent_Laws.html` | Grade 7 Accelerated | Product, quotient and power rules, zero and negative exponents, missing exponents |
+| `Geopardy_Area_of_Polygons.html` | Grade 7 | Area of rectangles, triangles, parallelograms, trapezoids, rhombi and composite figures, with a drawn figure on every question |
 
 Both are 5 categories by 5 point values (100 to 500) plus a 1000-point Final Question.
 

@@ -8,7 +8,8 @@ var app = document.getElementById('app');
 var S = null;                                   // game state (saved)
 var undoStack = [];                             // snapshots (not saved)
 var ui = { overlay: null, reopen: false, correct: {}, podiumShown: 0 };
-var prefs = load(PREF_KEY) || { title: 'BOARDS UP!', vol: 80, tickVol: 60, music: true, teams: 6, teamSize: 4, mult: 1, huddle: 20, bonus: 50, startTier: 0, dark: true, names: [] };
+var prefs = load(PREF_KEY) || { title: 'GEOPARDY!', vol: 80, tickVol: 60, music: true, teams: 6, teamSize: 4, mult: 1, huddle: 20, bonus: 50, startTier: 0, dark: true, names: [] };
+if (prefs.title === 'BOARDS UP!') prefs.title = 'GEOPARDY!';   // the game was Boards Up! until 3 Oct 2026; a saved default follows the rename
 
 function load(k) { try { return JSON.parse(localStorage.getItem(k)); } catch (e) { return null; } }
 function store(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
@@ -415,7 +416,7 @@ function act(a, d, el) {
 function snapshotAward() { award(); }
 function readSetup() {
   var t = document.getElementById('title'), e = document.getElementById('endtime');
-  if (t) prefs.title = t.value.trim() || 'BOARDS UP!';
+  if (t) prefs.title = t.value.trim() || 'GEOPARDY!';
   if (e) ui.endTime = e.value || null;
   Array.prototype.forEach.call(document.querySelectorAll('[data-name]'), function (inp) { prefs.names[+inp.dataset.name] = inp.value; });
 }

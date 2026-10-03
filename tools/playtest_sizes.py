@@ -1,6 +1,6 @@
 """Second pass over a built file: other screen sizes and edge cases.
 
-    python3 tools/playtest_sizes.py games/Boards_Up_Area_of_Polygons.html [screenshot_dir]
+    python3 tools/playtest_sizes.py games/Geopardy_Area_of_Polygons.html [screenshot_dir]
 
 Checks that a saved game from a different unit is not offered for resume, the huddle and boards-up phases,
 a windowed panel browser (1920x940), a laptop (1366x768), a 5:4 screen, and a phone in portrait.

@@ -1,4 +1,4 @@
-"""To-scale SVG figures for Boards Up units.
+"""To-scale SVG figures for Geopardy units.
 
 Every figure is described in real units (y up). Shapes are scaled to fit a fixed-height canvas so label text is the
 same size on every figure. Labels that state a length can pass `check=` and the build fails if the drawn segment

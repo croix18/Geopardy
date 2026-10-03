@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Assemble a single-file Boards Up game from the engine parts and one unit.
+"""Assemble a single-file Geopardy game from the engine parts and one unit.
 
     python3 tools/build.py                      # every unit in units/ (files starting with _ are skipped)
     python3 tools/build.py units/area_of_polygons.json
@@ -18,9 +18,9 @@ SMALL_WORDS = {'of', 'and', 'the', 'a', 'an', 'to', 'in', 'on', 'for'}
 
 
 def game_name(unit_path):
-    """units/area_of_polygons.json -> Boards_Up_Area_of_Polygons.html"""
+    """units/area_of_polygons.json -> Geopardy_Area_of_Polygons.html"""
     words = unit_path.stem.strip('_').split('_')
-    return 'Boards_Up_' + '_'.join(w if w in SMALL_WORDS and i else w.capitalize() for i, w in enumerate(words)) + '.html'
+    return 'Geopardy_' + '_'.join(w if w in SMALL_WORDS and i else w.capitalize() for i, w in enumerate(words)) + '.html'
 
 
 def check_unit(unit, where):
@@ -56,7 +56,7 @@ def build(unit_path, out_path=None):
         m = re.fullmatch(r'\{\{audio ([^}]+)\}\}', p)
         if m: parts[i] = audio(m); continue
         if p == '{{unit}}': parts[i] = unit_json
-        elif p == '{{title}}': parts[i] = 'Boards Up! ' + unit['title']
+        elif p == '{{title}}': parts[i] = 'Geopardy! ' + unit['title']
     out = ''.join(parts)
 
     out_path = Path(out_path) if out_path else GAMES / game_name(unit_path)
