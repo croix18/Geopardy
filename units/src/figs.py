@@ -2,7 +2,9 @@
 
 Every figure is described in real units (y up). Shapes are scaled to fit a fixed-height canvas so label text is the
 same size on every figure. Labels that state a length can pass `check=` and the build fails if the drawn segment
-is not actually that long, so a figure can never disagree with its own labels."""
+is not actually that long, so a figure can never disagree with its own labels. Circles and sectors (added
+for the Circles unit, October 2026) are drawn from their radius and angles in the same units; a radius or a
+diameter is labelled on a drawn segment, so its `check=` holds it to the circle it sits in."""
 import math
 
 FS = 30            # label font size, in viewBox px
@@ -29,15 +31,43 @@ def shoelace(pts):
     return abs(s) / 2
 
 
+def sector_area(r, a0, a1):
+    """Area of the wedge Fig.sector(c, r, a0, a1) draws, as a fraction of pi: returns (r*r*(a1-a0)/360)."""
+    return r * r * (a1 - a0) / 360
+
+
 class Fig:
     def __init__(self, max_w=560, max_h=250):
         self.max_w, self.max_h = max_w, max_h
         self.polys, self.ops, self.checks = [], [], []
+        self.rounds = []            # circles and sectors, drawn under everything else
         self._geom = []
 
     # ---------- geometry (unit coordinates) ----------
     def poly(self, pts, cls='fs'):
         self.polys.append((list(pts), cls)); self._geom += list(pts); return self
+
+    def circle(self, c, r, cls='fs'):
+        """A circle of radius r (units) about c. cls='fm' draws the outline only."""
+        self.rounds.append(('circle', c, r, cls))
+        self._geom += [(c[0] - r, c[1]), (c[0] + r, c[1]), (c[0], c[1] - r), (c[0], c[1] + r)]; return self
+
+    def sector(self, c, r, a0, a1, cls='fs'):
+        """The wedge of the circle about c from angle a0 to a1 (degrees, counter-clockwise from the
+        positive x-axis, a0 < a1 <= a0 + 360). Its area is r*r*pi*(a1-a0)/360: see sector_area()."""
+        assert a0 < a1 <= a0 + 360, 'sector angles must run counter-clockwise, at most one full turn'
+        self.rounds.append(('sector', c, r, a0, a1, cls))
+        pts = [c] + [(c[0] + r * math.cos(math.radians(a)), c[1] + r * math.sin(math.radians(a)))
+                     for a in [a0, a1] + [q for q in range(-720, 721, 90) if a0 < q < a1]]
+        self._geom += pts; return self
+
+    def seg(self, p, q):
+        """A solid line (a radius, a diameter, a chord)."""
+        self.ops.append(('seg', p, q)); self._geom += [p, q]; return self
+
+    def dot(self, p):
+        """A point mark (the center)."""
+        self.ops.append(('dot', p)); self._geom.append(p); return self
 
     def dash(self, p, q):
         self.ops.append(('dash', p, q)); self._geom += [p, q]; return self
@@ -49,6 +79,8 @@ class Fig:
         self.ops.append(('tick', p, q, n)); return self
 
     def centroid(self):
+        if not self.polys:                      # a figure of circles: the first circle's center
+            return self.rounds[0][1]
         pts = self.polys[0][0]
         return (sum(p[0] for p in pts) / len(pts), sum(p[1] for p in pts) / len(pts))
 
@@ -99,13 +131,40 @@ class Fig:
             return (n[0] * sign, n[1] * sign), t, mid
 
         out_text = []
+        for rd in self.rounds:
+            if rd[0] == 'circle':
+                _, c, r, cls = rd
+                cx, cy = P(c); see(cx - r * s, cy - r * s); see(cx + r * s, cy + r * s)
+                out.append(f'<circle class="{cls}" cx="{cx:.1f}" cy="{cy:.1f}" r="{r * s:.1f}"/>')
+            else:
+                _, c, r, a0, a1, cls = rd
+                cx, cy = P(c)
+                if a1 - a0 >= 360:
+                    see(cx - r * s, cy - r * s); see(cx + r * s, cy + r * s)
+                    out.append(f'<circle class="{cls}" cx="{cx:.1f}" cy="{cy:.1f}" r="{r * s:.1f}"/>')
+                    continue
+                p0 = P((c[0] + r * math.cos(math.radians(a0)), c[1] + r * math.sin(math.radians(a0))))
+                p1 = P((c[0] + r * math.cos(math.radians(a1)), c[1] + r * math.sin(math.radians(a1))))
+                for q in [a0, a1] + [q for q in range(-720, 721, 90) if a0 < q < a1]:
+                    see(*P((c[0] + r * math.cos(math.radians(q)), c[1] + r * math.sin(math.radians(q)))))
+                see(cx, cy)
+                large = 1 if a1 - a0 > 180 else 0
+                # y is flipped on the way to px, so counter-clockwise in units is sweep-flag 0 in SVG
+                out.append(f'<path class="{cls}" d="M{cx:.1f},{cy:.1f} L{p0[0]:.1f},{p0[1]:.1f} '
+                           f'A{r * s:.1f},{r * s:.1f} 0 {large} 0 {p1[0]:.1f},{p1[1]:.1f} Z"/>')
         for pts, cls in self.polys:
             pp = [P(p) for p in pts]
             for x, y in pp: see(x, y)
             out.append(f'<polygon class="{cls}" points="' + ' '.join(f'{x:.1f},{y:.1f}' for x, y in pp) + '"/>')
         for op in self.ops:
             k = op[0]
-            if k == 'dash':
+            if k == 'seg':
+                a, b = P(op[1]), P(op[2]); see(*a); see(*b)
+                out.append(f'<line class="fm" x1="{a[0]:.1f}" y1="{a[1]:.1f}" x2="{b[0]:.1f}" y2="{b[1]:.1f}"/>')
+            elif k == 'dot':
+                a = P(op[1]); see(*a)
+                out.append(f'<circle class="fm" cx="{a[0]:.1f}" cy="{a[1]:.1f}" r="3"/>')
+            elif k == 'dash':
                 a, b = P(op[1]), P(op[2]); see(*a); see(*b)
                 out.append(f'<line class="fd" x1="{a[0]:.1f}" y1="{a[1]:.1f}" x2="{b[0]:.1f}" y2="{b[1]:.1f}"/>')
             elif k == 'ra':

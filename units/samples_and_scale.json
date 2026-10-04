@@ -1,0 +1,179 @@
+{
+ "title": "Samples & Scale",
+ "course": "Grade 7 Math",
+ "tiers": [
+  100,
+  200,
+  300,
+  400,
+  500
+ ],
+ "tierNotes": [
+  "Warm-up",
+  "One step",
+  "Fractions and percents",
+  "Two steps",
+  "Challenge"
+ ],
+ "categories": [
+  {
+   "name": "Sample or Population?",
+   "questions": [
+    {
+     "q": "A school has $900$ students. The principal asks $60$ of them about lunch. How many students are in the sample?",
+     "a": "$60$ students",
+     "work": "The sample is the group that was actually asked: $60$. The population is all $900$."
+    },
+    {
+     "q": "A factory makes $5{,}000$ phones in a day. An inspector tests $200$ of them. How many phones are in the population?",
+     "a": "$5{,}000$ phones",
+     "work": "The population is the whole group the inspector wants to know about: all $5{,}000$. The $200$ tested are the sample."
+    },
+    {
+     "q": "In a random sample of $40$ students, $10$ walk to school. What fraction of the sample walks? Write it in lowest terms.",
+     "a": "$\\frac{1}{4}$",
+     "work": "Part of the sample over the whole sample: $\\frac{10}{40} = \\frac{1}{4}$."
+    },
+    {
+     "q": "A librarian wants to know the favorite kind of book of all $800$ students. Which plan gives a random sample?\nPlan A: ask the $30$ students in the book club.\nPlan B: draw $30$ student numbers from all $800$.",
+     "a": "Plan B",
+     "work": "In Plan B every one of the $800$ students has the same chance of being drawn. The book club is not like the whole school."
+    },
+    {
+     "q": "In a random sample of $80$ students, $30\\%$ chose soccer. How many students in the sample chose soccer?",
+     "a": "$24$ students",
+     "work": "$30\\%$ of the sample: $0.30 \\cdot 80 = 24$."
+    }
+   ]
+  },
+  {
+   "name": "Probability from Data",
+   "questions": [
+    {
+     "q": "A spinner landed on red $12$ times in $40$ spins. What fraction of the spins were red? Write it in lowest terms.",
+     "a": "$\\frac{3}{10}$",
+     "work": "Reds over all spins: $\\frac{12}{40} = \\frac{3}{10}$."
+    },
+    {
+     "q": "A number cube was rolled $50$ times and showed a 4 on $10$ of the rolls. It will be rolled $300$ more times. Use these results to predict the number of 4s.",
+     "a": "About $60$",
+     "work": "The trial says $\\frac{10}{50} = \\frac{1}{5}$ of the rolls. Then $\\frac{1}{5} \\cdot 300 = 60$."
+    },
+    {
+     "q": "A coin landed heads $27$ times in $60$ flips. Use these results to predict the number of heads in $400$ more flips.",
+     "a": "About $180$",
+     "work": "Use what happened, not what should happen: $\\frac{27}{60} = \\frac{9}{20}$. Then $\\frac{9}{20} \\cdot 400 = 180$."
+    },
+    {
+     "q": "In a trial, $35\\%$ of the seeds sprouted. Tomorrow $600$ seeds will be planted. Use the trial to predict the number that sprout.",
+     "a": "About $210$ seeds",
+     "work": "$35\\%$ of $600$: $0.35 \\cdot 600 = 210$."
+    },
+    {
+     "q": "A marble is drawn from a bag and put back, $80$ times. $28$ of the draws were blue. Use these results to predict how many of the next $200$ draws will NOT be blue.",
+     "a": "About $130$",
+     "work": "Not blue: $80 - 28 = 52$ of the $80$ draws, and $\\frac{52}{80} = \\frac{13}{20}$. Then $\\frac{13}{20} \\cdot 200 = 130$."
+    }
+   ]
+  },
+  {
+   "name": "Predict the Population",
+   "questions": [
+    {
+     "q": "In a random sample of $50$ students, $8$ ride a bike to school. The school has $600$ students. Predict how many ride a bike.",
+     "a": "About $96$ students",
+     "work": "The sample fraction times the population: $\\frac{8}{50} \\cdot 600 = 96$."
+    },
+    {
+     "q": "In a random sample of $200$ light bulbs, $6$ are faulty. A shipment holds $3{,}000$ bulbs. Predict the number of faulty bulbs in the shipment.",
+     "a": "About $90$ bulbs",
+     "work": "$\\frac{6}{200} = \\frac{3}{100}$ of the sample is faulty. Then $\\frac{3}{100} \\cdot 3{,}000 = 90$."
+    },
+    {
+     "q": "In a random sample of $250$ voters, $40\\%$ say yes. The town has $7{,}000$ voters. Predict how many of them would say yes.",
+     "a": "About $2{,}800$ voters",
+     "work": "The percent goes with the population, not with the $250$: $0.40 \\cdot 7{,}000 = 2{,}800$."
+    },
+    {
+     "q": "$14$ students in a club are seventh graders. That is $20\\%$ of the club. How many students are in the club?",
+     "a": "$70$ students",
+     "work": "This time the whole group is missing: $20\\%$ of the club is $14$, so the club is $14 \\div 0.20 = 70$."
+    },
+    {
+     "q": "A ranger tags $30$ turtles and lets them go. Later she catches $120$ turtles at random, and $9$ of them are tagged. Estimate the number of turtles in the pond.",
+     "a": "About $400$ turtles",
+     "work": "$\\frac{9}{120} = \\frac{3}{40}$ of the second catch is tagged, so the $30$ tagged turtles are about $\\frac{3}{40}$ of the pond: $30 \\div \\frac{3}{40} = 400$."
+    }
+   ]
+  },
+  {
+   "name": "Scale Factor",
+   "questions": [
+    {
+     "q": "A side that is $4$ cm long is $12$ cm long in the scaled copy. Find the scale factor.",
+     "a": "$3$",
+     "work": "Copy over original: $12 \\div 4 = 3$."
+    },
+    {
+     "q": "A triangle has a perimeter of $30$ cm. It is redrawn with a scale factor of $2.5$. Find the perimeter of the copy.",
+     "a": "$75\\ \\text{cm}$",
+     "work": "Every side is multiplied by $2.5$, so the perimeter is too: $30 \\cdot 2.5 = 75$."
+    },
+    {
+     "q": "A rectangle has an area of $15\\ \\text{cm}^2$. It is redrawn with a scale factor of $4$. Find the area of the copy.",
+     "a": "$240\\ \\text{cm}^2$",
+     "work": "Length and width are both multiplied by $4$, so the area is multiplied by $4 \\cdot 4 = 16$: $15 \\cdot 16 = 240$."
+    },
+    {
+     "q": "A shape has a perimeter of $48$ in. It is redrawn with a scale factor of $\\frac{1}{4}$. Find the new perimeter.",
+     "a": "$12\\ \\text{in}$",
+     "work": "A scale factor less than 1 shrinks it: $48 \\cdot \\frac{1}{4} = 12$."
+    },
+    {
+     "q": "A figure's perimeter goes from $12$ cm to $60$ cm when it is scaled. Its original area is $8\\ \\text{cm}^2$. Find the area of the copy.",
+     "a": "$200\\ \\text{cm}^2$",
+     "work": "The scale factor is $60 \\div 12 = 5$. Area uses it twice: $8 \\cdot 5 \\cdot 5 = 200$."
+    }
+   ]
+  },
+  {
+   "name": "Scale Drawings",
+   "questions": [
+    {
+     "q": "A plan uses the scale 1 in. : $5$ ft. A wall is $9$ in. long on the plan. How long is the real wall?",
+     "a": "$45\\ \\text{ft}$",
+     "work": "Each inch on the plan is $5$ ft: $9 \\cdot 5 = 45$."
+    },
+    {
+     "q": "A map uses the scale 1 cm : $20$ km. Two towns are really $160$ km apart. How far apart are they on the map?",
+     "a": "$8\\ \\text{cm}$",
+     "work": "Going from real to map, divide: $160 \\div 20 = 8$."
+    },
+    {
+     "q": "A plan uses the scale 1 cm : $5$ m. What is the scale factor from the plan to the real thing?",
+     "a": "$500$",
+     "work": "Put both in the same unit first: $5$ m is $500$ cm. So 1 cm stands for $500$ cm, and the scale factor is $500$."
+    },
+    {
+     "q": "A plan uses the scale 1 in. : $4$ ft. This room is $6$ in. by $5$ in. on the plan. Find the room's real area.",
+     "a": "$480\\ \\text{ft}^2$",
+     "work": "Scale each side first: $6 \\cdot 4 = 24$ ft and $5 \\cdot 4 = 20$ ft. Then $24 \\cdot 20 = 480$.",
+     "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"-88 -78 344 400\" role=\"img\"><polygon class=\"fs\" points=\"0.0,200.0 240.0,200.0 240.0,0.0 0.0,0.0\"/><polyline class=\"fm\" points=\"0.0,183.0 17.0,183.0 17.0,200.0\"/><polyline class=\"fm\" points=\"223.0,200.0 223.0,183.0 240.0,183.0\"/><polyline class=\"fm\" points=\"240.0,17.0 223.0,17.0 223.0,0.0\"/><polyline class=\"fm\" points=\"17.0,0.0 17.0,17.0 0.0,17.0\"/><text x=\"120.0\" y=\"227.0\" text-anchor=\"middle\" dominant-baseline=\"central\">6 in</text><text x=\"-42.0\" y=\"100.0\" text-anchor=\"middle\" dominant-baseline=\"central\">5 in</text></svg>"
+    },
+    {
+     "q": "A real garden is $30$ ft by $18$ ft. A plan of it uses the scale 1 in. : $6$ ft. Find the garden's area on the plan.",
+     "a": "$15\\ \\text{in}^2$",
+     "work": "Scale each side down first: $30 \\div 6 = 5$ in. and $18 \\div 6 = 3$ in. Then $5 \\cdot 3 = 15$."
+    }
+   ]
+  }
+ ],
+ "final": {
+  "category": "Scale It Twice",
+  "solo": 90,
+  "q": "A plan uses the scale 1 in. : $8$ ft. On the plan, this gym floor is $10$ in. by $6$ in. Find the real area of the gym floor.",
+  "a": "$3{,}840\\ \\text{ft}^2$",
+  "work": "Scale each side first: $10 \\cdot 8 = 80$ ft and $6 \\cdot 8 = 48$ ft. Then $80 \\cdot 48 = 3{,}840$. (Or: $60\\ \\text{in}^2$ on the plan, and each square inch is $8 \\cdot 8 = 64\\ \\text{ft}^2$.)",
+  "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"-88 -78 437 400\" role=\"img\"><polygon class=\"fs\" points=\"0.0,200.0 333.3,200.0 333.3,0.0 0.0,0.0\"/><polyline class=\"fm\" points=\"0.0,183.0 17.0,183.0 17.0,200.0\"/><polyline class=\"fm\" points=\"316.3,200.0 316.3,183.0 333.3,183.0\"/><polyline class=\"fm\" points=\"333.3,17.0 316.3,17.0 316.3,0.0\"/><polyline class=\"fm\" points=\"17.0,0.0 17.0,17.0 0.0,17.0\"/><text x=\"166.7\" y=\"227.0\" text-anchor=\"middle\" dominant-baseline=\"central\">10 in</text><text x=\"-42.0\" y=\"100.0\" text-anchor=\"middle\" dominant-baseline=\"central\">6 in</text></svg>"
+ }
+}

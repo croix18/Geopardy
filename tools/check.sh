@@ -13,6 +13,8 @@ git check-ignore -q .github-token || { echo ".github-token is not git-ignored" >
 echo "== units (answers and figure labels are checked as they are generated)"
 python3 units/src/exponent_laws.py | tail -1
 python3 units/src/area_of_polygons.py | tail -1
+python3 units/src/circles.py | tail -1
+python3 units/src/samples_and_scale.py | tail -1
 
 echo "== build"
 python3 tools/build.py

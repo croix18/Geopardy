@@ -92,10 +92,29 @@ default title is moved to the new one at load.
   Windy Hill lesson banks can emit the same file. Geopardy stays a static single file; the generating
   and checking happen in Cadence. A Deckhand card for Geopardy mirrors the Cadence card.
 
+- **4 Oct 2026**: two units for the on-level course, asked for by Croix as one of the "family
+  hooks" when M7 moved onto the shared build kit: **Circles** (`units/src/circles.py`; M7 lessons
+  4.05–4.10 — `area_of_polygons` already covers 4.01–4.04, so the two games together are the Unit 4
+  review) and **Samples & Scale** (`units/src/samples_and_scale.py`; M7 Unit 5). `figs.py` gained
+  `circle`, `sector`, `seg` and `dot` (a radius or diameter is labelled on a drawn segment, so its
+  `check=` holds it to the circle; a shaded sector is compared with the angle actually drawn); the
+  area unit regenerates byte for byte. Both generators compute every answer from the question's own
+  numbers with exact fractions, print the answer and the worked step from the computed value, compare
+  it with a value worked by hand, and refuse to write a unit in which two questions share an answer.
+  **Transfer surfaces are kept out by the generator**: the game is played on the review day, before
+  the unit test, and the test's two transfer items (HOUSE STYLE ruling 18) must meet a surface nobody
+  rehearsed — for Unit 4 a bicycle wheel's distance and a walkway by subtraction, for Unit 5 a sample
+  fraction given as a decimal and a model at 1 : N converted to centimeters. A question that names
+  one of those stops the build. If a unit's transfer items change, change the guard at the end of
+  its generator. Questions are original, in the lessons' own wording ("Use 3.14 for π", "Predict",
+  "scale factor"); the probability questions say "use these results", so 27 heads in 60 flips is not
+  an invitation to answer one half.
+
 ## What is verified, and what is not
 
 Verified by `tools/check.sh`, in headless Chromium:
-- every unit answer (computer algebra for exponents; shoelace area from drawn coordinates for area),
+- every unit answer (computer algebra for exponents; shoelace area from drawn coordinates for area;
+  exact fractions against a second, hand-worked value for circles and for samples and scale),
   and every labelled length against the segment it labels;
 - a full game per unit: all 25 tiles in ladder order, a mid-game reload and resume, the Final and the
   podium, with no console errors and no question overlapping the header, clock or buttons;
